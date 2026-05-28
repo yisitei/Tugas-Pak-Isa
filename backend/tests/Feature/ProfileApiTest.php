@@ -11,7 +11,7 @@ class ProfileApiTest extends TestCase
         $this->getJson('/api/profile')
             ->assertOk()
             ->assertJsonPath('profile.name', 'Kevin')
-            ->assertJsonCount(2, 'education')
+            ->assertJsonCount(3, 'education')
             ->assertJsonCount(6, 'skills')
             ->assertJsonCount(3, 'hobbies');
     }
